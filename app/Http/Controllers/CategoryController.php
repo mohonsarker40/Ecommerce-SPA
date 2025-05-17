@@ -57,22 +57,27 @@ class CategoryController extends Controller
 
     public function update(Request $request)
     {
-        if (!$this->can('category_edit')) {
-            return $this->returnData(5000, null, 'You do not have permission to edit this category');
-        }
+//        if (!$this->can('category_edit')) {
+//            return $this->returnData(5000, null, 'You do not have permission to edit this category');
+//        }
 
 
         try {
             $id = $request->input('id');
 
-            $category = $this->model->where('id', $id)->first();
+            $data = $this->model->where('id', $id)->first();
 
-            if ($category) {
-                $category->name = $request->input('name');
-                $category->update();
+            if ($data) {
+                $data->name = $request->input('name');
+                $data->update();
 
                 return response()->json(['status' => 2000]);
             }
+//            if ($data) {
+//                $data->fill($input);
+//                $data->update();
+//                return returnData(2000, null, 'Successfully Updated');
+//            }
 
             return response()->json(['status' => 3000]);
 

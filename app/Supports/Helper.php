@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 trait Helper
 {
     public $model = '';
-
     public function returnData($state = 2000, $result = null, $message = null){
         $data = [];
 

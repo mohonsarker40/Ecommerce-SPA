@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Validator;
 
 class Category extends Model
 {
-//    protected $table = 'categories';
+    protected $table = 'categories';
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'status'];
     public function validate($input)
     {
         return Validator::make($input, [

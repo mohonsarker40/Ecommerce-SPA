@@ -4,15 +4,15 @@
             <form @submit.prevent="submit()" >
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Modal Heading</h4>
+                        <h4 class="modal-title">{{modalTitle}}</h4>
                         <button type="button" class="btn-close"  @click="closeModal(modalId)"></button>
                     </div>
                     <div class="modal-body">
                         <slot></slot>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success" >Submit</button>
                         <button type="button" class="btn btn-danger" @click="closeModal(modalId)">Close</button>
+                        <button type="submit" class="btn btn-success" >Submit</button>
                     </div>
                 </div>
             </form>

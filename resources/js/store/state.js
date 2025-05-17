@@ -5,6 +5,7 @@ export const state = {
     updateId: '',
     formType: 1,
     Config: {},
+    modalTitle :'',
     permissions: [],
 
 

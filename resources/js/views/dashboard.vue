@@ -28,7 +28,7 @@
                         <div class="card bg-primary text-white shadow">
                             <div class="card-body d-flex justify-content-between align-items-center pb-5">
                                 <span>Product</span>
-                                <h4 class="mb-0">0</h4>
+                                <h4 class="mb-0">{{ dataList.product }}</h4>
                             </div>
                         </div>
                     </div>

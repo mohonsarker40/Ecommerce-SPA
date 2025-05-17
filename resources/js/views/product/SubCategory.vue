@@ -9,8 +9,7 @@
                 <td> {{ data.name }} </td>
                 <td> {{ data.category ? data.category.name : 'N/A' }} </td>
                 <td>
-                    <a class="bg-success" @click="changeStatus(data)"
-                       v-html="showStatus(data.status)"></a>
+                    <a @click="changeStatus(data)" v-html="showStatus(data.status)"></a>
                 </td>
                 <td>
                     <button @click="openEditModal(data)" class="btn btn-outline-success">
@@ -28,9 +27,8 @@
                 <div class="col-md-12 d-flex mb-2">
                     <label class="col-md-4">Category Name</label>
                     <div class="col-md-8">
-                        <select v-validate="'required'"
-                                v-model="formData.category_id" name="name" class="form-control" type="text">
-                            <option value="">Select</option>
+                        <select v-validate="'required'" v-model="formData.category_id" class="form-select">
+                            <option value="">--Select--</option>
                             <template v-for="(item, index) in requiredData.category">
                                 <option :value="item.id">{{ item.name }}</option>
                             </template>
@@ -65,9 +63,9 @@
         },
         mounted() {
             this.getDataList();
-            // this.$set(this.formData, 'name', '');
             this.getRequiredData(['category']);
             this.$set(this.formData, 'name', '');
+            this.$set(this.formData, 'category_id', '');
         }
     }
 </script>

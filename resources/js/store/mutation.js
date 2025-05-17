@@ -17,6 +17,9 @@ export const mutations = {
     Config(state, data){
         state.Config = data;
     },
+    modalTitle(state, title) {
+        state.modalTitle = title;
+    },
     permissions(state, data){
         state.permissions = data;
     }

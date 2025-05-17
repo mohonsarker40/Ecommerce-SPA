@@ -17,12 +17,20 @@ export default {
 
         getRequiredData: function (array) {
             const _this = this;
+
+            // যদি কেউ ভুল করে 'category, sub_category' টাইপে দেয়, তাহলে split করে দাও
+            if (array.length === 1 && typeof array[0] === 'string' && array[0].includes(',')) {
+                array = array[0].split(',').map(i => i.trim());
+            }
+
             _this.httpReq('post', _this.urlGenerate('api/required_data'), array, {}, function (retData) {
                 $.each(retData.result, function (eachItem, value) {
                     _this.$set(_this.requiredData, eachItem, value);
                 });
             });
         },
+
+
         httpReq: function (method, url, data = {}, params = {}, callback = false) {
             axios({
                 method: method,
@@ -59,9 +67,10 @@ export default {
         changeStatus: function(obj = {}, showMessage = true) {
             const _this = this;
             this.$store.commit('httpRequest', true);
-            _this.axios({ method: "post", url: `${_this.urlGenerate()}/status`, data: obj })
+            _this.axios({ method: "patch", url: `${_this.urlGenerate()}/status`, data: obj })
                 .then(function(response) {
                     _this.$store.commit('httpRequest', false);
+                    obj.status = obj.status === 1 ? 0 : 1;
                     _this.getDataList(_this.currentPagination);
                     if (showMessage) {
                         _this.$toastr(response.data.result, response.data.message, 'Success');

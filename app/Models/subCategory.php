@@ -8,15 +8,21 @@ use Illuminate\Support\Facades\Validator;
 
 class subCategory extends Model
 {
+    protected $table = 'sub_categories';
     use HasFactory;
 
-    protected $fillable = ['name', 'category_id'];
+    protected $fillable = [
+        'id',
+        'name',
+        'category_id',
+        'status'
+    ];
 
     public function validate($input)
     {
         return Validator::make($input, [
+            'name' => 'required|string',
             'category_id' => 'required',
-            'name' => 'required|string'
         ]);
     }
 

@@ -17,6 +17,9 @@ export const getters = {
     Config(state){
         return state.Config;
     },
+    modalTitle(state) {
+        return state.modalTitle;
+    },
     permissions(state){
         return state.permissions;
     }

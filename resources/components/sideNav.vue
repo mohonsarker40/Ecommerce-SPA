@@ -46,6 +46,7 @@
 
                         <router-link class="nav-link" to="/admin/category">Category<i class="ps-5 fas fa-angle-right"></i></router-link>
                         <router-link class="nav-link" to="/admin/sub_category">Sub Category<i class="ps-5 fas fa-angle-right"></i></router-link>
+                        <router-link class="nav-link" to="/admin/product">Product<i class="ps-5 fas fa-angle-right"></i></router-link>
 
                     <!--customer menu-->
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -61,7 +62,7 @@
                     <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne"
                          data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <router-link class="nav-link" to="/admin/customer/order">Order</router-link>
+                            <router-link class="nav-link" to="">Order</router-link>
                         </nav>
                     </div>
 

@@ -8,8 +8,7 @@
                     <td> {{ index+1 }} </td>
                     <td> {{ data.name }} </td>
                     <td>
-                        <a class="bg-success" @click="changeStatus(data)"
-                           v-html="showStatus(data.status)"></a>
+                        <a @click="changeStatus(data)" v-html="showStatus(data.status)"></a>
                     </td>
                     <td>
                         <button @click="openEditModal(data,data.id)"

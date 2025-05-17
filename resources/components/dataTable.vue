@@ -24,7 +24,7 @@
                             <thead>
                             <tr>
                                 <template v-for="heading in tableHeading">
-                                    <th>{{ heading }}</th>
+                                    <th class="text-center">{{ heading }}</th>
                                 </template>
 
 
