@@ -3,25 +3,23 @@
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading">Core</div>
                     <router-link class="nav-link" to="/admin/dashboard">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-tachometer"></i>
                         </div>
                         Dashboard
                     </router-link>
-                    <a class="nav-link">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-shield-alt"></i> RBAC
-                        </div>
-                    </a>
-                    <a class="nav-link">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-cog"></i> Settings
-                        </div>
-                    </a>
+<!--                    <a class="nav-link">-->
+<!--                        <div class="sb-nav-link-icon">-->
+<!--                            <i class="fas fa-shield-alt"></i> RBAC-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <a class="nav-link">-->
+<!--                        <div class="sb-nav-link-icon">-->
+<!--                            <i class="fas fa-cog"></i> Settings-->
+<!--                        </div>-->
+<!--                    </a>-->
 
-                    <div class="sb-sidenav-menu-heading">Ecommerce</div>
                     <template v-for="(menu, mIndex) in Config.menus">
                         <template v-if="menu.sub_menus.length > 0">
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -45,6 +43,10 @@
                         </template>
                     </template>
 
+
+                        <router-link class="nav-link" to="/admin/category">Category<i class="ps-5 fas fa-angle-right"></i></router-link>
+                        <router-link class="nav-link" to="/admin/sub_category">Sub Category<i class="ps-5 fas fa-angle-right"></i></router-link>
+
                     <!--customer menu-->
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                        data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
@@ -60,7 +62,6 @@
                          data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <router-link class="nav-link" to="/admin/customer/order">Order</router-link>
-                            <router-link class="nav-link" to="/admin/customer/customers">Customer</router-link>
                         </nav>
                     </div>
 

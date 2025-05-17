@@ -19,7 +19,7 @@ Route::view('admin/{any}', 'singleApp')->where('any', '.*')->middleware('auth');
 Route::prefix('api')->middleware('auth')->group(function (){
     Route::post('required_data', [SupportController::class, 'requiredData']);
     Route::get('configurations', [SupportController::class, 'getConfigurations']);
-    Route::get('dashboard', [DashboardController::class, 'dashboardData']);
+    Route::get('/dashboard', [DashboardController::class, 'dashboardData']);
 
     Route::resource('categories', CategoryController::class);
     Route::resource('sub_categories', SubCategoryController::class);

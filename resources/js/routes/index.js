@@ -1,5 +1,4 @@
-import dashboardComponent from "../views/dashboardComponent.vue";
-import About from "../views/About";
+import dashboard from "../views/dashboard";
 import Category from "../views/product/Category";
 import SubCategory from "../views/product/SubCategory";
 import Product from "../views/product/Product";
@@ -7,13 +6,9 @@ import Product from "../views/product/Product";
 const route = [
     {
         path: '/admin/dashboard',
-        name: 'home',
-        component: dashboardComponent
-    },
-    {
-        path: '/admin/about',
-        name : 'about',
-        component: About
+        name: 'dashboard',
+        component: dashboard,
+        meta: {pageTitle: 'Dashboard', dataUrl : 'api/dashboard'}
     },
     {
         path: '/admin/category',
