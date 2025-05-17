@@ -11,11 +11,10 @@
                         <a @click="changeStatus(data)" v-html="showStatus(data.status)"></a>
                     </td>
                     <td>
-                        <button @click="openEditModal(data,data.id)"
-                                class="btn btn-outline-success">
+                        <button @click="openEditModal(data,data.id)" class="btn btn-sm btn-outline-success">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button @click=" deleteInformation(data.id, index)" class="btn btn-outline-danger">
+                        <button @click=" deleteInformation(data.id, index)" class="btn btn-sm btn-outline-danger">
                             <i class="fas fa-trash-alt"></i>
                         </button>
 

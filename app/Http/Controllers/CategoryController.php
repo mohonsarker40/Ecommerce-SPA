@@ -73,11 +73,6 @@ class CategoryController extends Controller
 
                 return response()->json(['status' => 2000]);
             }
-//            if ($data) {
-//                $data->fill($input);
-//                $data->update();
-//                return returnData(2000, null, 'Successfully Updated');
-//            }
 
             return response()->json(['status' => 3000]);
 

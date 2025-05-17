@@ -65,16 +65,13 @@ export default {
             var findStatus = statusList.find((each)=>{return each.value === status});
             if (findStatus){
                 if (parseInt(findStatus.value) === 1) {
-                    // return `<span class="badge badge-soft-success">${findStatus.text}</span>`;
                     return `<button type="button" class="btn btn-sm btn-success">${findStatus.text}</button>`;
 
                 }
                 if (parseInt(findStatus.value) === 0) {
-                    // return `<span class="badge badge-soft-danger">${findStatus.text}</span>`;
                     return `<button type="button" class="btn btn-sm btn-danger">${findStatus.text}</button>`;
 
                 }
-                // return `<span class="badge badge-soft-warning">${findStatus.text}</span>`;
                 return `<button type="button" class="btn btn-sm btn-warning">${findStatus.text}</button>`;
 
             }

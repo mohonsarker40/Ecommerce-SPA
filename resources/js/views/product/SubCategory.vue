@@ -12,11 +12,11 @@
                     <a @click="changeStatus(data)" v-html="showStatus(data.status)"></a>
                 </td>
                 <td>
-                    <button @click="openEditModal(data)" class="btn btn-outline-success">
+                    <button @click="openEditModal(data)" class="btn btn-sm btn-outline-success">
                         <i class="fas fa-edit"></i>
                     </button>
 
-                    <button @click=" deleteInformation(data.id, index)" class="btn btn-outline-danger">
+                    <button @click=" deleteInformation(data.id, index)" class="btn btn-sm btn-outline-danger">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
@@ -25,7 +25,7 @@
         <form-modal ref="myModal" @submit="submitForm(formData)">
             <div class="row">
                 <div class="col-md-12 d-flex mb-2">
-                    <label class="col-md-4">Category Name</label>
+                    <label class="col-md-4">Category</label>
                     <div class="col-md-8">
                         <select v-validate="'required'" v-model="formData.category_id" class="form-select">
                             <option value="">--Select--</option>
